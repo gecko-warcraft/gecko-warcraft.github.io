@@ -11,6 +11,7 @@
   fetch('https://localhost:3000/auth_code', {
     method: 'POST',
     headers: {
+      "Access-Control-Allow-Origin": "https://localhost:3000/",
       'Content-Type': 'application/json'
     },
     body: json_data
