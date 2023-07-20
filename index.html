@@ -5,13 +5,13 @@
   const code = urlParams.get('code');
   const id = localStorage.getItem('discord_id');
 
-  const json_data = {'auth_code': code, 'discord_id': id}
+  const json_data = { "auth_code": code, "discord_id": id }
   console.log(code + " " + id);
 
   fetch('http://localhost:3000/auth_code', {
     method: 'POST',
     headers: {
-      Accept: 'application.json',
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
       'Content-Type': 'application/json'
     },
     body: json_data
