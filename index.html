@@ -10,8 +10,8 @@
 
   fetch('https://localhost:3000/auth_code', {
     method: 'POST',
+    mode: "cors",
     headers: {
-      "Access-Control-Allow-Origin": "https://gecko-warcraft.github.io",
       'Content-Type': 'application/json'
     },
     body: json_data
