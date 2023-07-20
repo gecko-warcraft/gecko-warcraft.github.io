@@ -1,1 +1,9 @@
-Hello World
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const code = urlParams.get('code');
+  const discord_id = localStorage.getItem('discord_id');
+  console.log(code + " " + discord_id)
+</script>
+
+Hit!!!
