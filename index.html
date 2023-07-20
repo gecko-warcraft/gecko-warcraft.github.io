@@ -8,10 +8,9 @@
   const json_data = { "auth_code": code, "discord_id": id }
   console.log(code + " " + id);
 
-  fetch('http://localhost:3000/auth_code', {
+  fetch('https://localhost:3000/auth_code', {
     method: 'POST',
     headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:3000/auth_code',
       'Content-Type': 'application/json'
     },
     body: json_data
