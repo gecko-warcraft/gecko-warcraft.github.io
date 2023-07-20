@@ -5,16 +5,16 @@
   const code = urlParams.get('code');
   const id = localStorage.getItem('discord_id');
 
-  const json_data = { "auth_code": code, "discord_id": id }
+  const data = { "auth_code": code, "discord_id": id }
   console.log(code + " " + id);
 
   fetch('https://localhost:3000/auth_code', {
     method: 'POST',
-    mode: "cors",
+    mode: "no-cors",
     headers: {
       'Content-Type': 'application/json'
     },
-    body: json_data
+    body: JSON.stringify(data)
   });
 </script>
 
